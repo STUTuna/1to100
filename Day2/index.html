@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="add_block()">click me</button>
+    <div id="div_target"></div>
+    <script>
+        let div_target = {};
+        let num_count = 0;
+        function add_block() {
+            let node = document.createElement('div');
+            let textnode = document.createTextNode('TextNode'+ num_count);
+            div_target = document.getElementById('div_target');
+
+            node.appendChild(textnode);
+            div_target.appendChild(node);
+            num_count++;
+        }
+
+    </script>
+</body>
+</html>
