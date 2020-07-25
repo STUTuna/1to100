@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            type:'post',
+            url: "index.php",
+            dataType:"json",
+            success:function(msg){
+                console.log(msg);
+            }
+        });
+        // fetch('./index.php')
+        // .then(function (res) {
+        //     console.log(res);
+        //     let new_res = JSON.parse(res);
+        //     console.log(new_res);
+        // })
+    </script>
+</body>
+</html>
